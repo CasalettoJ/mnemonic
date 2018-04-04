@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	mnemonic.Run()
+	mnemonic.RunDemo()
 }
