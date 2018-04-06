@@ -20,7 +20,7 @@ const (
 func generateRandomBits() []byte {
 	randomBits := make([]byte, randomBitAmount/8)
 	_, err := rand.Read(randomBits)
-	CheckAnxiety(err)
+	checkAnxiety(err)
 	return randomBits
 }
 
@@ -48,7 +48,7 @@ func mapDictionary(separatedBits []string) []string {
 	var words []string
 	for _, bits := range separatedBits {
 		index, err := strconv.ParseInt(bits, 2, 64)
-		CheckAnxiety(err)
+		checkAnxiety(err)
 		words = append(words, EnglishDict[index])
 	}
 	return words
